@@ -19,9 +19,3 @@ Run Server:
 ```bash
   $ npm start
 ```
-
-Run Webpack:
-
-```bash
-  $ npm run front
-```
