@@ -7,21 +7,21 @@ Usage
 
 Install:
 
-.. code:: bash
-
+```bash
   $ npm i -g babel-cli
   $ npm i -g nodemon
   $ npm i -g webpack
   $ npm i
+```
 
 Run Server:
 
-.. code:: bash
-
+```bash
   $ npm start
+```
 
 Run Webpack:
 
-.. code:: bash
-
+```bash
   $ npm run front
+```
