@@ -1,7 +1,6 @@
 # blog-tutorial-nodejs-react
 
 Creating blog archive on Nodejs, Express, React, Redux, Webpack, ES6/ES7
-======
 
 Usage
 -----
