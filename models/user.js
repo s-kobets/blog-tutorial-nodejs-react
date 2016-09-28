@@ -15,15 +15,12 @@ UserSchema.pre('save', async function (next) {
   const hash = await bcrypt.hash(this.password, salt);
 
   this.password = hash;
+
   next();
 });
 
 UserSchema.methods.comparePassword = async function(password) {
   return bcrypt.compare(password, this.password);
-  //bcrypt.compare(password, this.password)
-    //.then(result => {
-      //return result;
-    //});
 };
 
 export default mongoose.model('User', UserSchema);
