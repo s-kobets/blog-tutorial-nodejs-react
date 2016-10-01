@@ -13,12 +13,10 @@ const app = express();
 
 mongoose.Promise = bluebird;
 mongoose.connect(config.database, err => {
-  if (err) {
-    throw err
-  }
+  if (err) throw err;
 
-  console.log('Mongo connected');
-})
+  console.log(`Mongo connected!`);
+});
 
 app.listen(config.port, err => {
     if (err) throw err;
