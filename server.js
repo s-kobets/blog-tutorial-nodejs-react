@@ -8,7 +8,7 @@ import bluebird from 'bluebird';
 import config from './config';
 import authRoute from './routes/auth';
 import errorHandler from './middlewares/errorHandler';
-import checkUser from './middlewares/checkUser';
+import userAuth from './middlewares/userAuth';
 
 const app = express();
 
