@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 
 import config from '../config';
 
-export default (req, res, next) => {
+export default function (req, res, next) {
   const token = req.headers['authorization'];
 
   if (!token) {
@@ -20,6 +20,7 @@ export default (req, res, next) => {
       message
     });
   }
-
+  
+  req.token = tokenObj;
   next();
 }
