@@ -4,13 +4,10 @@ import User from '../models/user';
 import config from '../config';
 
 export async function getUserByToken(token) {
-  const tokenObject = jwt.verify(token, config.secret);
-  const { _id } = tokenObject;
+  const { _id } = token;
 
   try {
-    var user = await User.findOne({ _id });
-
-    user.select('-password');
+    var user = await User.findOne({ _id }, { password: 0 });
   } catch (e) {
     throw e;
   }
