@@ -1,11 +1,11 @@
-import Page from '../models/page.js';
+import Page from '../models/page';
 
 export async function create(req, res, next) {
   const pageData = req.body;
   const userId = req.user._id;
 
   pageData.userId = userId;
-  
+
   try {
     var page = await Page.create(pageData);
   } catch ({ message }) {

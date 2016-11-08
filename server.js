@@ -10,7 +10,7 @@ import authRoute from './routes/auth';
 import userRoute from './routes/user';
 import pageRoute from './routes/page';
 import errorHandler from './middlewares/errorHandler';
-import getUser from './middlewares/user';
+import getUser from './middlewares/getUser';
 import checkToken from './middlewares/checkToken';
 
 const app = express();
